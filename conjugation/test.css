@@ -1,0 +1,146 @@
+:root {
+  font-size: 1em;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+*:focus {
+  border-radius: 1rem;
+  outline: 1px solid #de8190;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+section {
+  font-family: sans-serif;
+}
+a {
+  color: #2f81f7;
+  text-decoration: none;
+  cursor: pointer;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
+  color: #d0d0d0;
+  font-size: 1rem;
+  font-family: Helvetica;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+input {
+  background: #121212;
+  border-radius: 1rem;
+  border: 1px solid #292929;
+  padding: 0.5rem;
+  color: #d0d0d0;
+}
+.landing {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.landing div {
+  padding: 0.25rem;
+}
+.landing #title {
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+.landing .questionFocus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.landing .questionFocus .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+.landing .start-quiz {
+  padding: 1em 0;
+}
+.landing .start-quiz button {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  width: 30vw;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+.landing .start-quiz button:hover {
+  cursor: pointer;
+}
+.landing .start-quiz #go {
+  background: #de8190;
+  color: #4c141d;
+  border: 1px solid #c5344b;
+}
+.landing .start-quiz #defaults {
+  background: #6bbcdf;
+  color: #0d2f3e;
+  border: 1px solid #298fbb;
+}
+.landing .options .grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+}
+.landing .options .grid .item {
+  display: inline-block;
+}
+.landing .options .grid .item div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}
+.landing .options .grid .item h4 {
+  font-size: 1.25rem;
+  color: #c4c4c4;
+}
+.landing .options .grid .item p {
+  padding-top: 1rem;
+  color: #aaaaaa;
+  font-style: bold;
+}
+.landing .pool {
+  width: 100%;
+  padding: 1rem;
+  background-color: #292929;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.25rem;
+  color: #d787d7;
+}
+.landing .global-options {
+  padding-bottom: 4rem;
+}

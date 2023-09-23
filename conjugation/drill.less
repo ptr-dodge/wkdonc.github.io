@@ -1,25 +1,23 @@
-:root {
-  --primary-colour: #0060c0;
-}
+@primary-color: #0060c0;
+@other: #4A2067;
+@neutral-dark: #441f00;
+@incorrect: #992a2a;
+@correct: #217b21;
+@neutral: #995c2a;
+@question-furigana: white;
+@input-background: #202020;
+@input-color: whitesmoke;
+@shake-level: 6px;
+@text-color: whitesmoke;
 
-body, input {
-  font-family: Amaranth, sans-serif; 
-  background: #eee;
-
-  --other: #4A2067;
-  --neutral-dark: #441f00;
-  --incorrect: #992a2a;
-  --correct: #217b21;
-  --neutral: #995c2a;
-  --question-furigana: white;
-  --input-background: white;
-  --input-shadow: #888;
-  --input-color: white;
-  --shake-level: 6px;
+body {
+  font-family: sans-serif;
+  background: #101010;
+  color: @text-color;
 }
 
 .questionOuter {
-  background: var(--other);
+  background: @other;
 }
 
 #question {
@@ -28,7 +26,7 @@ body, input {
   margin-right: 8px;
   margin-left: 8px;
   font-size: 16px;
-  text-shadow: 2px 2px 4px var(--neutral-dark);
+  text-shadow: 2px 2px 4px (@neutral-dark);
   text-align: center;
   color: white;
 }
@@ -60,13 +58,16 @@ body, input {
     font-size: 1.15rem;
   }
 }
+
 /* Small devices (landscape phones, below 576px) */
 @media (max-width: 576px) {
   #question {
     font-size: 24px;
   }
 
-  #answer, .correct, .incorrect {
+  #answer,
+  .correct,
+  .incorrect {
     font-size: 28px;
   }
 
@@ -75,6 +76,7 @@ body, input {
     line-height: 28px;
   }
 }
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
@@ -82,7 +84,9 @@ body, input {
     font-size: 32px;
   }
 
-  #answer, .correct, .incorrect {
+  #answer,
+  .correct,
+  .incorrect {
     font-size: 32px;
   }
 
@@ -99,7 +103,9 @@ body, input {
     font-size: 32px;
   }
 
-  #answer, .correct, .incorrect {
+  #answer,
+  .correct,
+  .incorrect {
     font-size: 30px;
   }
 
@@ -116,7 +122,9 @@ body, input {
     font-size: 40px;
   }
 
-  #answer, .correct, .incorrect {
+  #answer,
+  .correct,
+  .incorrect {
     font-size: 30px;
   }
 
@@ -133,7 +141,9 @@ body, input {
     font-size: 40px;
   }
 
-  #answer, .correct, .incorrect {
+  #answer,
+  .correct,
+  .incorrect {
     font-size: 30px;
   }
 
@@ -144,11 +154,12 @@ body, input {
 }
 
 #inputArea {
-  background: var(--input-background);
+  background: (@input-background);
 }
 
-#inputArea, .correct, .incorrect {
-  box-shadow: 2px 2px 4px 0px var(--input-shadow);
+#inputArea,
+.correct,
+.incorrect {
   width: calc(100vw - 32px);
   margin-left: auto;
   margin-right: auto;
@@ -157,7 +168,7 @@ body, input {
 }
 
 #answer {
-  background: var(--input-background);
+  background: (@input-background);
   width: 100%;
   border: 0;
   padding-top: 12px;
@@ -165,7 +176,9 @@ body, input {
   text-align: center;
 }
 
-#answer, .correct, .incorrect {
+#answer,
+.correct,
+.incorrect {
   height: 54px;
 }
 
@@ -179,21 +192,20 @@ body, input {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  color: var(--input-color);
+  color: (@input-color);
 }
 
 .correct {
-  background-color: var(--correct);
+  background-color: (@correct);
 }
 
 .incorrect {
-  background-color: var(--incorrect);
+  background-color: (@incorrect);
 }
 
 #responseButton {
 
   border: none;
-  box-shadow: 2px 2px 4px 0px var(--input-shadow);
   width: calc(100vw - 32px);
   margin-left: auto;
   margin-right: auto;
@@ -202,7 +214,7 @@ body, input {
   padding-bottom: 12px;
   display: table;
 
-  color: var(--input-color);
+  color: (@input-color);
 }
 
 .answer-correct {
@@ -215,6 +227,7 @@ body, input {
 
 input#numQuestions {
   width: 100%;
+  // background-color: #101010;
 }
 
 select#questionFocus {
@@ -243,7 +256,8 @@ div.options ul {
   margin-bottom: 10px;
 }
 
-h2, h4 {
+h2,
+h4 {
   font-weight: bold;
 }
 
@@ -252,19 +266,45 @@ h2, h4 {
   #splash h2 {
     font-size: 1.3em;
     margin-bottom: 1.0em
-  } 
+  }
 }
 
 @keyframes shake {
-  0% { transform: translate(0px, 0px); }
-  12.5% { transform: translate(calc(0px - var(--shake-level)), 0px); }
-  25% { transform: translate(var(--shake-level), 0px); }
-  37.5% { transform: translate(calc(0px - var(--shake-level)), 0px); }
-  50% { transform: translate(var(--shake-level), 0px); }
-  62.5% { transform: translate(calc(0px - var(--shake-level)), 0px); }
-  75% { transform: translate(var(--shake-level), 0px); }
-  87.5% { transform: translate(calc(0px - var(--shake-level)), 0px); }
-  100% { transform: translate(0px, 0px); }
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  12.5% {
+    transform: translate(calc(0px - (@shake-level)), 0px);
+  }
+
+  25% {
+    transform: translate((@shake-level), 0px);
+  }
+
+  37.5% {
+    transform: translate(calc(0px - (@shake-level)), 0px);
+  }
+
+  50% {
+    transform: translate((@shake-level), 0px);
+  }
+
+  62.5% {
+    transform: translate(calc(0px - (@shake-level)), 0px);
+  }
+
+  75% {
+    transform: translate((@shake-level), 0px);
+  }
+
+  87.5% {
+    transform: translate(calc(0px - (@shake-level)), 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
 .shake {
@@ -276,7 +316,7 @@ dl.questionOptions {
   display: table;
 }
 
-dl.questionOptions > div {
+dl.questionOptions>div {
   display: table-row;
 }
 
@@ -290,7 +330,7 @@ dl.questionOptions dd {
 }
 
 #quizSection span.emphasis {
-  color: #c0c0ff;
+  color: #8989bb;
 }
 
 #quizSection span.first,
@@ -298,12 +338,14 @@ dl.questionOptions dd {
   text-transform: capitalize;
 }
 
-ruby.furiganaHover rt, ruby.furiganaHover rp {
+ruby.furiganaHover rt,
+ruby.furiganaHover rp {
   opacity: 0;
   transition: opacity 0.2s;
 }
 
-ruby.furiganaHover:hover rt, ruby.furiganaHover:hover rp {
+ruby.furiganaHover:hover rt,
+ruby.furiganaHover:hover rp {
   opacity: 100;
 }
 
@@ -313,21 +355,26 @@ div#history {
   overflow-x: hidden;
 }
 
-a, a:hover, a:visited, .breadcrumb-item.active {
-  color: var(--primary-colour);
+a,
+a:hover,
+a:visited,
+.breadcrumb-item.active {
+  color: @primary-color;
 }
 
 button.btn.btn-primary {
-  background-color: var(--primary-colour);
-  border-color: var(--primary-colour);
+  background-color: (@primary-color);
+  border-color: (@primary-color);
 }
 
-.btn.focus, .btn:focus {
-      box-shadow: 0 0 0 .2rem #0060c080;
+.btn.focus,
+.btn:focus {
+  box-shadow: 0 0 0 .2rem #0060c080;
 }
 
-.btn-primary.focus, .btn-primary:focus {
-      box-shadow: 0 0 0 .2rem #0060c080;
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 0 .2rem #0060c080;
 }
 
 #voiceSelectError {

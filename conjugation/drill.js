@@ -1,5 +1,9 @@
 // drill.js
 
+let selOptions = new Select("#questionFocus")
+console.log(selOptions)
+selOptions.target.addEventListener('focus', e => console.log(e))
+
 var transformations = [];
 
 var log;
