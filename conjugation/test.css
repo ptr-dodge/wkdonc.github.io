@@ -9,7 +9,6 @@
   -moz-box-sizing: border-box;
 }
 *:focus {
-  border-radius: 1rem;
   outline: 1px solid #de8190;
 }
 h1,
@@ -62,9 +61,6 @@ input {
   justify-content: flex-start;
   align-items: center;
 }
-.landing div {
-  padding: 0.25rem;
-}
 .landing #title {
   font-size: 2rem;
   padding: 1rem;
@@ -75,6 +71,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 0.5rem;
 }
 .landing .questionFocus .item {
   display: flex;
@@ -106,10 +103,18 @@ input {
   color: #0d2f3e;
   border: 1px solid #298fbb;
 }
+.landing .options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .landing .options .grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 2rem;
+  gap: 3vw;
+  padding: 1rem;
 }
 .landing .options .grid .item {
   display: inline-block;
@@ -141,6 +146,10 @@ input {
   gap: 0.25rem;
   color: #d787d7;
 }
+.landing #voice_select_options {
+  padding: 1rem;
+}
 .landing .global-options {
-  padding-bottom: 4rem;
+  padding: 1rem;
+  margin-bottom: 4rem;
 }
